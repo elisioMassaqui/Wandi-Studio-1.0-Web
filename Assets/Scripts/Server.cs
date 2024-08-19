@@ -5,8 +5,14 @@ using TMPro;
 
 public class Connection : MonoBehaviour
 {
-    public TextMeshProUGUI messageText; // Referência ao componente TextMeshProUGUI
+    [Header("Conexão com servidor")]
     public wandiController wandicontroller;
+    public TextMeshProUGUI messageText; // Referência ao componente TextMeshProUGUI
+    
+
+
+    [Header("Studio")]
+    public wandiStudio wandistudio;
 
     WebSocket websocket;
 
@@ -44,31 +50,61 @@ public class Connection : MonoBehaviour
 
     void ChangeTextColor(string message)
     {
-        if (messageText != null)
+        if (messageText != null && wandistudio.chat == true)
         {
             Color color;
             switch (message)
             {
+                case "J1Max":
                 case "Hello, Unity!":
                 wandicontroller.J1Max(40f);
-                    color = Color.green;
+                    color = Color.blue;
                     break;
-                case "Message 1":
+                case "J1Min":
+                case "Arduino":
                 wandicontroller.J1Min(40f);
-                    color = Color.red;
+                    color = Color.blue;
                     break;
-                case "Message 2":
+
+                case "J2Min":
+                case "Causa-Efeito":
                 wandicontroller.J2Min(40f);
                     color = Color.blue;
                     break;
-                case "Message 3":
+                case "J2Max":
+                case "SINER":
+                case "Mr.Robot":
                 wandicontroller.J2Max(40f);
-                    color = Color.yellow;
+                    color = Color.blue;
                     break;
-                case "Another Message":
-                wandicontroller.J2Max(40f);
-                    color = Color.magenta;
+
+                case "J3Min":
+                wandicontroller.J3Min(40f);
+                    color = Color.cyan;
                     break;
+                case "J3Max":
+                wandicontroller.J3Max(40f);
+                    color = Color.cyan;
+                    break;
+                
+                case "J4Min":
+                wandicontroller.J4Min(40f);
+                    color = Color.cyan;
+                    break;
+                case "J4Max":
+                wandicontroller.J4Max(40f);
+                    color = Color.cyan;
+                    break;
+
+                case "J5Min":
+                wandicontroller.J5Min(40f);
+                    color = Color.cyan;
+                    break;
+                case "J5Max":
+                wandicontroller.J5Max(40f);
+                    color = Color.cyan;
+                    break; 
+
                 default:
                     color = Color.white;
                     break;

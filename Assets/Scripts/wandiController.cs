@@ -10,8 +10,6 @@ public class wandiController : MonoBehaviour
 {
     public bool HOME;
 
-    public bool receber;
-
     [Header("Juntas Steps/s")]
     public Transform origemJ1; //Pegar o vector escalar do objecto.
     public float destinoJ1; //Inicializar o vector imaginário do objecto.
@@ -84,7 +82,7 @@ public class wandiController : MonoBehaviour
     void Start()
     {
         //Permitir mover o wandi
-        HOME = false;
+        HOME = true;
     }
 
     
@@ -175,54 +173,51 @@ public class wandiController : MonoBehaviour
     //A cada clique no button vai incrementar ou decrementar no valor do destino da junta.
 
     //Buttons para Steps/s
-    public void J1Max(float num){
+    public void J1Max(float num = 40f){
         destinoJ1 += num;
-
     } 
-    public void J1Min(float num){
+    public void J1Min(float num = 40f){
         destinoJ1 -= num;
     }
-    public void J2Max(float num){
+    public void J2Max(float num = 40f){
         destinoJ2 += num;
- 
     }
-    public void J2Min(float num){
+    public void J2Min(float num = 40f){
         destinoJ2 -= num;
-
     } 
 
     //Buttons para Graus/s
-    public void J3Max(){
-        destinoJ3 += 1f;
+    public void J3Max(float num = 40f){
+        destinoJ3 += num;
 
     }
-    public void J3Min(){
-        destinoJ3 -= 1f;
+    public void J3Min(float num = 40f){
+        destinoJ3 -= num;
 
     }
-    public void J4Max(){
-        destinoJ4 += 1f;
+    public void J4Max(float num = 40f){
+        destinoJ4 += num;
 
     }
-    public void J4Min(){
-        destinoJ4 -= 1f;
+    public void J4Min(float num = 40f){
+        destinoJ4 -= num;
 
     }
-    public void J5Max(){
-        destinoJ5 += 1f;
+    public void J5Max(float num = 40f){
+        destinoJ5 += num;
 
     }
-    public void J5Min(){
-        destinoJ5 -= 1f;
+    public void J5Min(float num = 40f){
+        destinoJ5 -= num;
 
     }
 
-    public void J6Max(){
-        destinoJ5 += 1f;
+    public void J6Max(float num = 40f){
+        destinoJ5 += num;
 
     }
-    public void J6Min(){
-        destinoJ5 -= 1f;
+    public void J6Min(float num = 40f){
+        destinoJ5 -= num;
 
     }
 
@@ -231,44 +226,44 @@ public class wandiController : MonoBehaviour
 
 
     //Velocidade do slider pode se incrementar e decrementar aqui e pra cada funçºao pode enviar algum char no Wandi Robot pra mudar a velocidade lá também, ao mesmo tempooo
-    public void velocidadeJ1Min(){
-        sliderVelocidadeJ1.value -= 0.01f;
+    public void velocidadeJ1Min(float vel = 0.01f){
+        sliderVelocidadeJ1.value -= vel;
 
     }
-    public void VelocidadeJ1Max(){
-        sliderVelocidadeJ1.value += 0.01f;
+    public void VelocidadeJ1Max(float vel = 0.01f){
+        sliderVelocidadeJ1.value += vel;
 
     }
-    public void velocidadeJ2Min(){
-        sliderVelocidadeJ2.value -= 0.01f;
+    public void velocidadeJ2Min(float vel = 0.01f){
+        sliderVelocidadeJ2.value -= vel;
 
     }
-    public void VelocidadeJ2Max(){
-        sliderVelocidadeJ2.value += 0.01f;
+    public void VelocidadeJ2Max(float vel = 0.01f){
+        sliderVelocidadeJ2.value += vel;
 
     }
-    public void velocidadeJ3Min(){
-        sliderVelocidadeJ3.value -= 0.01f;
+    public void velocidadeJ3Min(float vel = 0.01f){
+        sliderVelocidadeJ3.value -= vel;
 
     }
-    public void VelocidadeJ3Max(){
-        sliderVelocidadeJ3.value += 0.01f;
+    public void VelocidadeJ3Max(float vel = 0.01f){
+        sliderVelocidadeJ3.value += vel;
 
     }
-    public void velocidadeJ4Min(){
-        sliderVelocidadeJ4.value -= 0.01f;
+    public void velocidadeJ4Min(float vel = 0.01f){
+        sliderVelocidadeJ4.value -= vel;
 
     }
-    public void VelocidadeJ4Max(){
-        sliderVelocidadeJ4.value += 0.01f;
+    public void VelocidadeJ4Max(float vel = 0.01f){
+        sliderVelocidadeJ4.value += vel;
 
     }
-    public void velocidadeJ5Min(){
-        sliderVelocidadeJ5.value -= 0.01f;
+    public void velocidadeJ5Min(float vel = 0.01f){
+        sliderVelocidadeJ5.value -= vel;
 
     }
-    public void VelocidadeJ5Max(){
-        sliderVelocidadeJ5.value += 0.01f;
+    public void VelocidadeJ5Max(float vel = 0.01f){
+        sliderVelocidadeJ5.value += vel;
 
     }
 
