@@ -25,6 +25,8 @@ public class wandiStudio : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Aceitar mensagens de ws
+        chat = true;
         //Efeito carregar app
         StartCoroutine(iniciarHOME());
         //Esse aqui começa ativado pra tapar controle manual enquanto de chat começa ligado
